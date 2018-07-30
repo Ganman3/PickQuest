@@ -1,0 +1,13 @@
+name: Pick_Quest_Official_Server_Plugin
+
+main: pickquest.PickQuest
+
+version: 1.0
+
+commands:
+
+    testsafe:
+    
+        description: TESTING PURPOSES ONLY
+        
+        usage: /testsafe
