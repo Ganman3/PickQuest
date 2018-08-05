@@ -1,4 +1,4 @@
-package pickquest.common;
+package pickquest.ai.pathfinding;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.ListIterator;
 
 import org.bukkit.Location;
 
-public class Path {
+public class RandomPathing {
 	private HashMap<Integer, Location> pathSequence = new HashMap<>(); 
 	
 	public HashMap<Integer, Location> getPathSequence() {

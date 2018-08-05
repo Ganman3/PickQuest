@@ -1,52 +1,41 @@
 package pickquest.common;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.EnumSet;
+//import java.util.List;
+//import java.util.stream.Collectors;
+//import java.util.stream.Stream;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 
+import pickquest.data.SafeBlocks;
+
 //Note: change to Enumsets later
-enum unsafeUnder {
-	AIR, CAVE_AIR, LEGACY_AIR, WATER, LONG_GRASS, OAK_SAPLING, 
-	SPRUCE_SAPLING, BIRCH_SAPLING, JUNGLE_SAPLING, DARK_OAK_SAPLING,
-	ACACIA_SAPLING, RED_MUSHROOM, BROWN_MUSHROOM, WHEAT, REEDS, 
-	PUMPKIN_STEM, VINE, NETHER_WART, CARROTS, POTATOES, DANDELION, 
-	POPPY, BLUE_ORCHID, ALLIUM, AZURE_BLUET, RED_TULIP, ORANGE_TULIP,
-	WHITE_TULIP, PINK_TULIP, OXEYE_DAISY, SUNFLOWER, LILAC, RED_ROSE,
-	YELLOW_FLOWER, CARPET, SNOW
-	
-}
-enum safeAbove {
-	AIR, CAVE_AIR, LEGACY_AIR, WATER, DOUBLE_PLANT
-}
-enum safeAt {
-	AIR, CAVE_AIR, LEGACY_AIR, WATER, LONG_GRASS, OAK_SAPLING, 
-	SPRUCE_SAPLING, BIRCH_SAPLING, JUNGLE_SAPLING, DARK_OAK_SAPLING,
-	ACACIA_SAPLING, RED_MUSHROOM, BROWN_MUSHROOM, WHEAT, REEDS, 
-	PUMPKIN_STEM, VINE, NETHER_WART, CARROTS, POTATOES, DANDELION, 
-	POPPY, BLUE_ORCHID, ALLIUM, AZURE_BLUET, RED_TULIP, ORANGE_TULIP,
-	WHITE_TULIP, PINK_TULIP, OXEYE_DAISY, SUNFLOWER, LILAC, RED_ROSE,
-	YELLOW_FLOWER, CARPET, SNOW
-}
 
 public class HumanoidSafety {
-	public List<String> iterateUnsafeUnder() {
+	SafeBlocks sb = new SafeBlocks();
+	EnumSet<Material> unsafeUnder = sb.getUnsafeUnder();
+	EnumSet<Material> safeAt = sb.getSafeAt();
+	EnumSet<Material> safeAbove = sb.getSafeAbove();
+	String unsafeUnderString = unsafeUnder.toString();
+	String safeAtString = safeAt.toString();
+	String safeAboveString = safeAbove.toString();
+	/*public List<String> iterateUnsafeUnder() {
 		List<String> unsafeU = Stream.of(unsafeUnder.values()).map(Enum::name).collect(Collectors.toList());
 		return unsafeU;
 	}
 	
-	public List<String> iterateSafeAbove() {
+	/*public List<String> iterateSafeAbove() {
 		List<String> safeA = Stream.of(safeAbove.values()).map(Enum::name).collect(Collectors.toList());
 		return safeA;
 	}
 	
 	public List<String> iterateSafeAt() {
 		List<String> safeT = Stream.of(safeAt.values()).map(Enum::name).collect(Collectors.toList());
-		return safeT;
-	}
+		return safeT;*/
+	//}
 	
 	private ArrayList<Location> safeLocation = new ArrayList<>();
 	
@@ -69,18 +58,27 @@ public class HumanoidSafety {
 		String material1 = under.getBlockData().getMaterial().toString();
 		String material3 = above.getBlockData().getMaterial().toString();
 		String material2 = at.getBlockData().getMaterial().toString();
-			if(iterateUnsafeUnder().contains(material1)) {
+		//System.out.println(unsafeUnderString.contains(material1));
+		//System.out.println(safeAboveString.contains(material2));
+		
+			if(unsafeUnderString.contains(material1)) {
+				return safeList;
 			}
-			else if(iterateSafeAbove().contains(material3)) {
-							if(iterateSafeAt().contains(material2)) {
+			else if(safeAboveString.contains(material3)) {
+							if(safeAtString.contains(material2)) {
 								safeList.add(new Location(loc.getWorld(),loc.getX(),loc.getY(),loc.getZ()));
-
+								//System.out.println("Block is safe!" + " Block under point: " + material1 + " Lower block: " + material2 + " Higher block: " + material3 + locunder + locat + locabove);
+								isSafe = true;
 							}
-							else if(material2.contains("DOOR")) {
-								safeList.add(new Location(loc.getWorld(),loc.getX(),loc.getY(),loc.getZ()));
+							
 						}
-					
+			if(material3.contains("DOOR") && (material2.contains("DOOR") && !(unsafeUnderString.contains(material1)))) {
+				safeList.add(new Location(loc.getWorld(),loc.getX(),loc.getY(),loc.getZ()));
+				isSafe=true;
+				System.out.println(material1 + " " + material2 + " " + material3 + " " + locat + locabove);
 					}
+			
+			
 			return safeList;
 				}
 		

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.bukkit.Location;
 
-import pickquest.common.ScanRadiusBlk;
+import pickquest.common.operations.ScanRadiusBlk;
 
 public class BasicPathfinding {
 	private boolean executed;

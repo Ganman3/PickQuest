@@ -1,4 +1,4 @@
-package pickquest.common;
+package pickquest.common.operations;
 
 import java.util.ArrayList;
 
@@ -13,12 +13,12 @@ public class ScanRadiusBlk {
 		coordinateCandidates.add(loc);
 	}
 	public ArrayList<Location> scanRadius(Location loc, int radius) {
-		
+		System.out.println(loc);
 		for(double x = loc.getX() - radius; x<= (loc.getX() +radius); x++) {
 			for (double y = loc.getY() - 1; y<= (loc.getY() + 1); y++) {
 				for (double z = loc.getZ() - radius; z<= (loc.getZ() + radius); z++) {
 					addToCoordinates(new Location(loc.getWorld(), x, y, z));
-					//System.out.println("Added coordinate: " + (new Location(loc.getWorld(), x, y, z)));
+					System.out.println("Added coordinate: " + (new Location(loc.getWorld(), x, y, z)));
 				}
 			}
 		}
