@@ -1,5 +1,6 @@
 # PickQuest
-Play through a fully detailed, immersive RPG in Minecraft- or play it safe in vanilla. Irolai is awaiting your decision.
+
+**Play through a fully detailed, immersive RPG in Minecraft- or play it safe in vanilla. The world of Irolai is awaiting your decision.**
 
 Currently in testing, when you play PickQuest, we expect the denizens of Irolai to react and adjust to everything you do. 
 This MMO has a Harvest Moon-like attention to its characters. They have complex lives, and we want you to enjoy and love (or hate) 
