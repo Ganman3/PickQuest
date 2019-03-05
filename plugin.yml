@@ -1,0 +1,21 @@
+name: PickQuestOfficialServerPlugin
+
+main: pickquest.PickQuest
+
+version: 1.0
+
+api-version: 1.13
+
+commands:
+
+    testsafe:
+    
+        description: TESTING PURPOSES ONLY
+        
+        usage: /testsafe
+        
+    testmode:
+    
+        description: TELL PLAYERS YOU'RE TESTING
+        
+        usage: /testmode
