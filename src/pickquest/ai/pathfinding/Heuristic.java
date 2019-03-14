@@ -1,9 +1,8 @@
 package pickquest.ai.pathfinding;
 //import java.util.ArrayList;
-<<<<<<< HEAD
+
 //import java.util.ArrayList;
-=======
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 //import java.util.Collections;
 //import java.util.Comparator;
 //import java.util.HashMap;
@@ -15,11 +14,10 @@ import java.util.TreeMap;
 
 import org.bukkit.Location;
 
-<<<<<<< HEAD
+
 //import pickquest.common.HumanoidSafety;
 
-=======
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 public class Heuristic {
 	private Double distx;
 	private Double disty;
@@ -63,19 +61,19 @@ public class Heuristic {
 	public double findHeuristic(Location current, Location candidate, Location destination) {
 		//System.out.println("Hello");
 		//Get g cost later- right now, just use 1 for everything
-<<<<<<< HEAD
+
 		//System.out.println(candidate);
 		
-=======
+
 		System.out.println(candidate);
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 		MovementCost mc = new MovementCost();
 		g = mc.getCalculatedCost(current, candidate, destination);
 		distx = Math.sqrt(Math.pow(Math.abs(candidate.getX() - destination.getX()), 2.0));
 		disty = Math.sqrt(Math.pow(Math.abs(candidate.getY() - destination.getY()), 2.0));
 		distz = Math.sqrt(Math.pow(Math.abs(candidate.getZ() - destination.getZ()), 2.0));
 		h = distx + disty + distz;
-<<<<<<< HEAD
+
 		if(bestValues.contains(candidate)) { 
 			g=g+5;
 		}
@@ -85,28 +83,25 @@ public class Heuristic {
 		//System.out.println(f + " " + "candidate: " + candidate + "current: " + current);
 		//System.out.println(heuristicValues);
 		//System.out.println("Estimated cost: " + f + "Candidate: " + candidate);
-=======
+
 		f = g + h;
 		heuristicValues.put(f, candidate);
 		System.out.println(heuristicValues);
 		System.out.println("Estimated cost: " + f + "Candidate: " + candidate);
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 		return f;
 	}
 	
 	
 	public LinkedList<Location> returnBestValues() {
-<<<<<<< HEAD
+
 		//System.out.println(heuristicValues.firstKey());
 		Double bestValue = heuristicValues.firstKey();
 		Location bestLocation = heuristicValues.get(bestValue);
 		bestValues.add(bestLocation);
 		//ts.add(bestLocation);
-=======
-		Double bestValue = heuristicValues.firstKey();
-		Location bestLocation = heuristicValues.get(bestValue);
-		bestValues.add(bestLocation);
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
+
 		//System.out.println("Best values: " + bestValues);
 		heuristicValues.clear();
 		return bestValues;

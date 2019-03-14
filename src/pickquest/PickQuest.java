@@ -2,7 +2,7 @@ package pickquest;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
-<<<<<<< HEAD
+
 //Structure
 /*PickQuest - main class - loads and registers everything else
  

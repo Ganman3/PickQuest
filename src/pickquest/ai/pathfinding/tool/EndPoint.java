@@ -56,11 +56,11 @@ public class EndPoint implements Listener {
 				String blockMaterial = e.getClickedBlock().getLocation().getBlock().getType().toString();
 				String atLocationBlock = atLocation.getBlock().getType().toString();
 				String upLocationBlock = upLocation.getBlock().getType().toString();
-<<<<<<< HEAD
+
 				//System.out.println(blockMaterial + " " + blockLocation + " " + atLocation + " " + atLocationBlock + " " + upLocation + " " + upLocationBlock);
-=======
+
 				System.out.println(blockMaterial + " " + blockLocation + " " + atLocation + " " + atLocationBlock + " " + upLocation + " " + upLocationBlock);
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 				if(unsafeUnderString.contains(blockMaterial)) {
 					player.sendMessage("That block is unsafe for humanoid mobs!");
 					

@@ -1,23 +1,21 @@
 package pickquest.testing;
 
-<<<<<<< HEAD
-=======
+
 import java.util.ArrayList;
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.UUID;
 import org.bukkit.Location;
-<<<<<<< HEAD
-=======
+
+
 import org.bukkit.Material;
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-<<<<<<< HEAD
+
 import pickquest.ai.CustomNav;
 import pickquest.ai.pathfinding.Heuristic;
 import pickquest.ai.pathfinding.tool.EndPoint;
@@ -54,8 +52,7 @@ public class TestSafeLoc implements CommandExecutor {
 	later on (scope reasons)*/
 	public Heuristic bh = new Heuristic();
 	
-	
-=======
+
 import pickquest.ai.pathfinding.Heuristic;
 import pickquest.ai.pathfinding.tool.EndPoint;
 import pickquest.ai.pathfinding.tool.OriginPoint;
@@ -64,12 +61,12 @@ import pickquest.common.operations.ScanRadiusBlk;
 import pickquest.data.BlockMaterialData;
 
 public class TestSafeLoc implements CommandExecutor {
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 	public HashMap<UUID,Location> getOriginPoint = new HashMap<>();
 	@EventHandler	
 	@Override
 	
-<<<<<<< HEAD
+
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] arg3) {
 		if(sender instanceof Player) {
 		CustomNav cn = new CustomNav();
@@ -108,7 +105,7 @@ public class TestSafeLoc implements CommandExecutor {
 			
 		} while(!(getCurrent().equals(destination)));
 				}
-=======
+
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] arg3) {
 		if(sender instanceof Player) {
@@ -246,7 +243,7 @@ public class TestSafeLoc implements CommandExecutor {
 			
 		
 
->>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
+
 		return true;
 	}
 }
