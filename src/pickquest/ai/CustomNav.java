@@ -28,6 +28,14 @@ public class CustomNav {
 	public Location getCurrent() {
 		return current;
 	}
+	private Location last;
+	
+	public Location getLast() {
+		return last;
+	}
+	public void setLast(Location last) {
+		this.last = last;
+	}
 	
 	public void setCurrent(Location current) {
 		this.current= current;
@@ -84,6 +92,10 @@ public class CustomNav {
 			
 			int currentHeuristicIndex = bestValues.size() - 1;
 			current = bestValues.get(currentHeuristicIndex);
+				if(bestValues.size() >= 2) {
+					last = bestValues.get(currentHeuristicIndex - 1);
+					setLast(last);
+				}
 			setCurrent(current);
 			path.add(current);
 			

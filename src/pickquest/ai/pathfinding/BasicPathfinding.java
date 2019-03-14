@@ -1,4 +1,4 @@
-package pickquest.ai;
+package pickquest.ai.pathfinding;
 
 import java.util.ArrayList;
 

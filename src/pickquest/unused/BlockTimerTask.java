@@ -1,4 +1,4 @@
-package pickquest.common;
+package pickquest.unused;
 
 import org.bukkit.scheduler.BukkitRunnable;
 
