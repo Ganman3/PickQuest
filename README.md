@@ -7,4 +7,4 @@ When you play PickQuest, the world of Irolai, and its residents, all react to yo
 
 But that's just what you come home to. The world of Irolai is built up in complex, painstaking detail, with secrets to find around every corner. Think the Elder Scrolls, or the Legend of Zelda.
 
-Currently in early testing and development, we're approaching an alpha release soon. Until then, stay tuned!
+Currently in early testing and development.
