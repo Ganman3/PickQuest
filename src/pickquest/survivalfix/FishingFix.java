@@ -19,8 +19,11 @@ public class FishingFix implements Listener {
 		Location mobSpawn = player.getEyeLocation();
 		Random fish = new Random();
 	if(e.getCaught() != null) {
+<<<<<<< HEAD
 		if(world.toString().equals("I love you")) {
 			
+=======
+>>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
 		
 		int fishchance = fish.nextInt(100);
 		System.out.println(fishchance);
@@ -31,7 +34,11 @@ public class FishingFix implements Listener {
 			world.spawnEntity(mobSpawn, EntityType.WITCH);
 		}
 	}
+<<<<<<< HEAD
 	
 }
 	}
+=======
+}
+>>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
 }

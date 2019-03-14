@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: PickQuestOfficialServerPlugin
+=======
+name: Pick_Quest_Official_Server_Plugin
+>>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
 
 main: pickquest.PickQuest
 

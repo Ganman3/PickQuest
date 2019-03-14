@@ -75,7 +75,11 @@ public class HumanoidSafety {
 			if(material3.contains("DOOR") && (material2.contains("DOOR") && !(unsafeUnderString.contains(material1)))) {
 				safeList.add(new Location(loc.getWorld(),loc.getX(),loc.getY(),loc.getZ()));
 				isSafe=true;
+<<<<<<< HEAD
 				//System.out.println(material1 + " " + material2 + " " + material3 + " " + locat + locabove);
+=======
+				System.out.println(material1 + " " + material2 + " " + material3 + " " + locat + locabove);
+>>>>>>> 8b1463c3ebe4ed85bfddd2e4fbcb6bbd088619aa
 					}
 			
 			
